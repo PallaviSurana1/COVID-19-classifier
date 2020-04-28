@@ -4,8 +4,7 @@
 In this project, the aim is to use transfer learning to predict the infection of COVID-19 using chest X-Rays as the input.
 
 #### Transfer learning task
-The idea is to take a network which is pre-trained on a different domain from the task of interest, in this case the ImageNet database. Followed by, adapting it to your task. Deep learning is a representative of inductive learning where the objective for inductive-learning algorithms is to infer a mapping from a set of training examples. 
-
+The idea is to take a network which is pre-trained on a different domain from the task of interest, in this case the ImageNet database. 
 A VGG16 and VGG19 model is trained for this prediction task. The database used is from Kaggle, "COVID-19 Radiography Database", that contains images of COVID-19, Viral pneumonia and Normal Chest X-rays. Thsi project aims to classify lung images as COVID-positive or negative (2 classes). 
 
 ###### URL to the database - https://www.kaggle.com/tawsifurrahman/covid19-radiography-database
