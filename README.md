@@ -1,7 +1,19 @@
 # COVID-19-classifier
 
 ### Classification of COVID-19 infection in pulmonary images using Transfer learning approach
+In this project, the aim is to use trasnfer learning to predict the infection of COVID-19 using chest X-Rays as the input.
 
-#### Abstract
+#### Prediction task
+A VGG16 and VGG19 model is trained for this prediction task. The database used is from Kaggle, "COVID-19 Radiography Database", that contains images of COVID-19, Viral pneumonia and Normal Chest X-rays. Thsi project aims to classify lung images as COVID-positive or negative (2 classes). 
 
-The world is facing a pandemic, COVID-19 which has affected more than a million people worldwide. This is a viral infectious disease caused by a novel SARS-CoV-2 virus. The clinical picture of the disease is not very comprehensive and most lethality has been recorded due to upper respiratory tract infections. This study aims to identify and separate pneumonia infected COVID-19 lungs from other pneumonia and normal patients using pulmonary diagnostic imaging data (chest X-ray will be used). These images are accessed from databases, COVID-19 database by RISM and a Github repository, Covid Chest X-ray database. Some researchers have also released relevant datasets on Preprint servers with some other pre-existing lung X-rays and CT scans. All of these images contain COVID positive patient lung images, normal and pneumonia ones. Transfer learning approach was used to train one such dataset and classify images into  COVID-19 positive and other classes. The models used were based on the VGG framework (VGG16 and VGG19). Both of these models performed well but, the accuracy was not a very robust measure for the misclassification. The limitations of this study lie in the insufficiency of imaging data, improper orientation of images at this time and computational hindrance along with the misclassifications that exists in the very models. 
+###### URL to the database - https://www.kaggle.com/tawsifurrahman/covid19-radiography-database
+
+#### Detailed experiment
+COVID_VGG16.ipynb and COVID_VGG19.ipynb contain the detailed experiment and are under vgg-16 and vgg-19 branches respectively. For visualisation of results the Accuracy and error plots are considered that is under the images branch.
+The overall accuracy is > 95% and other results are included in the .txt files in the respective branches of the models.
+
+The current study showed approx a 7-10% of misclassification and the images are enlisted in the images branch. Transfer learning is the start point to build CNN's for such applications. There are other models that might perform better than the ones considered and have been worked on in other studies like Resnet, Inception, and others.
+
+#### Future experiments and limitations
+This is an effort to show how transfer learning can be used in a situation where the demand to reach the diagnosis of a patient is very sensitive and high. Further innovation and bettering the models using different models and picking the best one would help in applications in the healthcare industry. Further, chest CT images are preferred over XRays as they have a better readout and studies have shown they are more effective in their approach to classify between COVID+ patients and otehrwise. 
+
