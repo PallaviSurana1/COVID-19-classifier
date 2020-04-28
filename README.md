@@ -1,7 +1,7 @@
 # COVID-19-classifier
 
 ### Classification of COVID-19 infection in pulmonary images using Transfer learning approach
-In this project, the aim is to use trasnfer learning to predict the infection of COVID-19 using chest X-Rays as the input.
+In this project, the aim is to use transfer learning to predict the infection of COVID-19 using chest X-Rays as the input.
 
 #### Prediction task
 A VGG16 and VGG19 model is trained for this prediction task. The database used is from Kaggle, "COVID-19 Radiography Database", that contains images of COVID-19, Viral pneumonia and Normal Chest X-rays. Thsi project aims to classify lung images as COVID-positive or negative (2 classes). 
