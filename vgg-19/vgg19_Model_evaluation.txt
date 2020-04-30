@@ -1,0 +1,65 @@
+MODEL - VGG19
+
+## Test the accuracy of the generated model on the validation or test set.
+Validation-set classification accuracy: 97.24%
+Validation-set classification loss: 9.25%
+
+MODEL EVALUATION
+
+## One particular image of the COVID patient prediction gave about 99% accuracy. Tried this on random for 5 samples like this and got accuracy between 97 - 99%.
+[[9.4997384e-05 9.9790442e-01 2.0005784e-03]]
+<matplotlib.image.AxesImage at 0x7f8e9d4d5c18>
+
+## plot_covid_score.png
+The y - axis of this plot is in log scale ( is feasible as we have a good classification accuracy).
+opp- The yellow lines very close to 1 are the images that have a very good classification and represent the covid score.
+On the other hand the blue lines are close to zero and represent (1-covid score)= other images (pneumonia or normal images score)
+
+## Confusion matrix and classification report
+Confusion Matrix
+[[62  8 64]
+ [ 8  4 10]
+ [66 10 58]]
+Classification Report
+                 precision    recall  f1-score   support
+
+         Normal       0.46      0.46      0.46       134
+       COVID-19       0.18      0.18      0.18        22
+Viral Pneumonia       0.44      0.43      0.44       134
+
+       accuracy                           0.43       290
+      macro avg       0.36      0.36      0.36       290
+   weighted avg       0.43      0.43      0.43       290
+
+## For the covid score above we now compute the accuracy
+# We see that the predicted labels are quite similar to the true ones as the model accuracy is pretty good for the model.
+predicted labels:
+[[0. 1. 0.]
+ [1. 0. 0.]
+ [1. 0. 0.]
+ ...
+ [1. 0. 0.]
+ [0. 1. 0.]
+ [0. 1. 0.]]
+true labels:
+[[0. 0. 1.]
+ [1. 0. 0.]
+ [1. 0. 0.]
+ ...
+ [1. 0. 0.]
+ [0. 0. 1.]
+ [0. 0. 1.]]
+
+## At threshold of 0.3 we get overall accuracy of model as 91% approx. for both train and validation sets which means due ot the images quality there is overall reduction in actual prediction of model compared to single images.
+
+# Train - 
+all  219 misclassified samples (91.64%)
+
+# Validation dataset - 
+all   29 misclassified samples (90.00%)
+
+
+CONCLUSION
+On viewing some Xray images (code and image included in VGG main folder), we observe that the images are not very well taken and hence there is a chance of misclassification. Nevertheless this is a start point to train deep neural networks for a long term future direction with more images available and better classification approaches than the one discussed here.
+Misclassified images_color bad.png - this is the images that have very bad colors and are hence unclear. This is due to the image preprocessing performed by the dataset iterator.
+
